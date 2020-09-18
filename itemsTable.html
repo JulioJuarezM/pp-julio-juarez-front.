@@ -1,0 +1,41 @@
+<h4>Lista de Clientes</h4>
+<div ng-app="myApp">
+  <div ng-controller="myController">
+    <form>
+      <div class="form-group">
+        <label >Nombre</label>
+        <input type="text" ng-value="myVar" ng-model = "myVar" class="form-control" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <label >Pasatiempo</label>
+        <input type="text" class="form-control" placeholder="Pasatiempo">
+      </div>
+      <button type="submit" ng-click="fA()" class="btn btn-primary">Buscar</button>
+      <small id="emailHelp" class="form-text text-muted">Puede realizar la busqueda por nombre y por pasatiempo</small>
+    </form>
+  </div>
+</div>
+
+<div data-ng-controller="myController" data-ng-init="init()">
+  <div ng-app="myApp" ng-controller="myController">
+    <table ng-table="tableParams" class="table">
+        <tr>
+          <th>Nombre</th>
+          <th>Telefono</th>
+          <th>Edad</th>
+          <th>Genero</th>
+          <th>Pasatiempo</th>
+          <th>Fecha de Creacion</th>
+        </tr>
+        <tr ng-repeat="emps in empArray | orderBy : 'values.Nombre'">
+
+          <td>{{emps.values.Nombre}}</td>
+          <td>{{emps.values.Telefono}}</td>
+          <td>{{emps.values.Edad}}</td>
+          <td>{{emps.values.Genero}}</td>
+          <td>{{emps.values.Pasatiempo}}</td>
+          <td>{{emps.values.FechaRegistro | date:'dd-MM-yyyy'}}</td>
+        </tr>
+    </table>
+  </div>
+</div>

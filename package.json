@@ -1,0 +1,34 @@
+{
+  "name": "angularjs-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack-dev-server --entry ./app.js --output-filename ./build/app.bundle.js",
+    "build": "webpack -p --watch",
+    "dev": "webpack -d --watch",
+    "prod": "webpack -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.9",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulioJuarezM/pp-julio-juarez-back.git"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.28"
+  }
+}
